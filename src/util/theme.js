@@ -7,9 +7,9 @@ export default {
       contrastText: "#fff"
     },
     secondary: {
-      light: "#f73378",//"#33bfff",
-      main: "#f50057",//"#00b0ff",
-      dark: "#ab003c",//"#007bb2",
+      light: "#f73378", //"#33bfff",
+      main: "#f50057", //"#00b0ff",
+      dark: "#ab003c", //"#007bb2",
       contrastText: "#000"
       //#ab003c
       //#f50057
@@ -43,6 +43,15 @@ export default {
     },
     progress: {
       position: "absolute"
+    },
+    invisibleSeparator: {
+      border: "none",
+      margin: 4
+    },
+    visibleSeparator: {
+      width: "100%",
+      borderBottom: "1px solid rgba(0,0,0,0.1)",
+      marginBottom: 20
     }
   }
 };

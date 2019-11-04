@@ -2,14 +2,15 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
+import PostPost from '../post/PostPost';
 
 // MUI stuff
 //import { AppBar, ToolBar } from '@material-ui/core' not convinient 'tree shaking'?
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import PostPost from "./PostPost";
+import Button from '@material-ui/core/Button';
+
 // Icons
 //import AddIcon from "@material-ui/icons/Add";
 import HomeIcon from "@material-ui/icons/Home";
