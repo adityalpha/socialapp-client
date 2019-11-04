@@ -7,10 +7,13 @@ export default {
       contrastText: "#fff"
     },
     secondary: {
-      light: "#33bfff",
-      main: "#00b0ff",
-      dark: "#007bb2",
+      light: "#f73378",//"#33bfff",
+      main: "#f50057",//"#00b0ff",
+      dark: "#ab003c",//"#007bb2",
       contrastText: "#000"
+      //#ab003c
+      //#f50057
+      //#f73378
     }
   },
   spreadThis: {
