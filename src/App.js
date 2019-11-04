@@ -24,6 +24,10 @@ import axios from "axios";
 
 const theme = createMuiTheme(themeObject);
 
+//Last line in code
+axios.defaults.baseURL =
+  "https://asia-east2-socialapp-6eee5.cloudfunctions.net/api";
+
 //let authenticated;
 const token = localStorage.FBIdToken;
 if (token) {
