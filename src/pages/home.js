@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
+import PropTypes from "prop-types";
 
 import Post from "../components/Post";
 import Profile from "../components/Profile";
 
+import { connect } from "react-redux";
+import { getPosts } from "../redux/actions/dataActions";
+
 export class home extends Component {
-  state = {
-    posts: null
-  };
+  //state = {
+  //  posts: null
+  //};
   componentDidMount() {
+    /*
     //Fetching posts
     axios
       .get("/posts")
@@ -19,11 +24,13 @@ export class home extends Component {
           posts: res.data
         });
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err));*/
+    this.props.getPosts();
   }
   render() {
-    let recentPostsMarkup = this.state.posts ? (
-      this.state.posts.map(post => <Post key={post.postId} post={post} />)
+    const { posts, loading } = this.props.data;
+    let recentPostsMarkup = !loading ? (
+      posts.map(post => <Post key={post.postId} post={post} />)
     ) : (
       <p>Loading...</p>
     );
@@ -40,4 +47,16 @@ export class home extends Component {
   }
 }
 
-export default home;
+home.propTypes = {
+  getPosts: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  data: state.data
+});
+
+export default connect(
+  mapStateToProps,
+  { getPosts }
+)(home);
