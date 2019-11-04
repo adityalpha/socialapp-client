@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import MyButton from "../../util/MyButton";
-import PostPost from '../post/PostPost';
+import PostPost from "../post/PostPost";
+import Notifications from "./Notifications";
 
 // MUI stuff
 //import { AppBar, ToolBar } from '@material-ui/core' not convinient 'tree shaking'?
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 
 // Icons
 //import AddIcon from "@material-ui/icons/Add";
 import HomeIcon from "@material-ui/icons/Home";
-import Notifications from "@material-ui/icons/Notifications";
+//import Notifications from "@material-ui/icons/Notifications";
 
 export class Navbar extends Component {
   render() {
@@ -30,9 +31,7 @@ export class Navbar extends Component {
                   <HomeIcon />
                 </MyButton>
               </Link>
-              <MyButton tip="Notifications">
-                <Notifications />
-              </MyButton>
+              <Notifications />
             </Fragment>
           ) : (
             <Fragment>
